@@ -1,3 +1,16 @@
+@font-face {
+    font-family:'Noto Sans TC' ;
+    src: url(https://fonts.gstatic.com/s/notosanstc/v20/-nFlOG829Oofr2wohFbTp9i9WyEKSehbzKSBjgyYqEML3A_ajbajwVJ5kTuPLNzqyAbPohbs.26.woff2) format('woff2');
+}
+
+
+
+@font-face {
+    font-family:'Voyage';;
+    src: url(./static/font/Voyage-Regular.ttf);
+}
+
+
 *{
     margin: 0%;
     padding: 0;
@@ -18,7 +31,7 @@ html,body{
 #lp1{
     height: inherit;
     width: 60%;
-    background-color: bisque;
+    /* background-color: bisque; */
 }
 #rp2{
     height: inherit;
@@ -30,7 +43,7 @@ html,body{
 #vidContainer{
     height: 100vh;
     width: 100%;
-    background-color: aqua;
+    /* background-color: aqua; */
     position: relative;
     overflow: hidden;
 }
@@ -107,7 +120,7 @@ html,body{
     position: absolute;
     top:40% ;
     font-size: 9rem;
-    font-family: 'MADE Bon Voyage';
+    font-family: 'Voyage';
     color: white;
     line-height: 7.5rem;
     padding: 0 2rem;
@@ -191,7 +204,7 @@ html,body{
 #g1{
     height: 42%;
     width: 38%;
-    background-color: aqua;
+    /* background-color: aqua; */
     position: absolute;
     top:16%;
     right: 23%;
@@ -201,7 +214,7 @@ html,body{
 #ovr1{
     height: 100%;
     width: 100%;
-    background-color:black;
+    /* background-color:black; */
     position: relative;
     overflow: hidden;
 
@@ -214,7 +227,7 @@ html,body{
 #g2{
     height: 30%;
     width: 28%;
-    background-color: aqua;
+    /* background-color: aqua; */
     position: absolute;
     bottom: 6%;
     left: 13%;
