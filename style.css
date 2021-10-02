@@ -269,13 +269,11 @@ button:hover{
 }
 
 .reveal{
-   
     height: 100%;
     width: 100%;
     position: absolute;
     background-color: #FCFFEE;
     clip-path: polygon(100% 0, 0 0, 0 100%, 100% 100%);
-
 }
 
 
@@ -289,6 +287,14 @@ button:hover{
     }
     #lp1,#rp2{
         width: 100%;
+    }
+
+    #lp1{
+        height: 100vh;
+    }
+
+    #rp2{
+        height: 100vh;
     }
 
     #vidContainer video{
@@ -321,4 +327,11 @@ button:hover{
         line-height: 6rem;
     }
 
+    #btm{
+        margin-bottom: 4rem;
+    }
+
+    #m2{
+        top: 48%;
+    }
 }

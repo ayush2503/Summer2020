@@ -127,6 +127,7 @@ duration:0.8
 })
 
 .from("#btm a",{
+    opacity:0,
 y:50,
 stagger:0.2
 },"-=0.5")
@@ -182,7 +183,7 @@ function AnimateSmallScreen(){
     onStart:function(){
         animateText()
     } 
-    },"-=0.5")
+    },"-=0.1")
 
     .from("#m1",{
     opacity:0,
@@ -196,8 +197,9 @@ function AnimateSmallScreen(){
     })
 
     .from("#btm a",{
-    y:50,
-    stagger:0.2
+        opacity:0,
+        y:50,
+        stagger:0.2
     },"-=0.5")
 
     SmallScreenLine()
@@ -213,7 +215,7 @@ function AnimateSmallScreen(){
     t4.to(".reveal",{
         clipPath: "polygon(100% 0, 100% 0, 100% 100%, 100% 100%)",
         duration:1,
-        stagger:1.6
+        stagger:1.4
     })
 
     
