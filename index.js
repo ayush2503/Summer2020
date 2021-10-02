@@ -1,3 +1,18 @@
+function SmallScreenLine(){
+    let t3=gsap.timeline({
+        scrollTrigger:{
+            trigger:"#sidenav",
+            start:"top 50%",
+            // markers:true
+        }
+    })
+
+    t3.from("#sidenav #line",{
+        opacity:0,
+        width:0,
+        duration:0.8
+    })
+}
 function animateText(){
 $('.mp2 p').textillate({
     // the default selector to use when detecting multiple texts to animate
@@ -59,58 +74,61 @@ $('.mp2 p').textillate({
     type: 'char'
   });
 }
+
+function AnimateFullScreen(){
+
 let t1=gsap.timeline();
 t1
 .from("#onStart p",{
-    opacity:0,
-    ease:Expo.easeInOut,
-    y:100,
-    duration:1,
+opacity:0,
+ease:Expo.easeInOut,
+y:100,
+duration:1,
 })
 
 .to("#onStart p",{
-    y:-1000,
-    opacity:0,
-    duration:1,
-    ease:Expo.easeInOut,
+y:-1000,
+opacity:0,
+duration:1,
+ease:Expo.easeInOut,
 })
 
 .to("#onStart",{
-    opacity:0,
-    y:-122,
-    ease:Expo.easeInOut,
-    duration:0.7,
-    display:"none"
+opacity:0,
+y:-122,
+ease:Expo.easeInOut,
+duration:0.7,
+display:"none"
 },"-=1.2")
 
 
 .from(".link",{
-    opacity:0,
-    y:20,
-    // ease:Expo.easeInOut,
-    duration:1,
+opacity:0,
+y:20,
+// ease:Expo.easeInOut,
+duration:1,
 },"-=0.5")
 
 .from(".mp2",{
-    opacity:0,
-    onStart:function(){
-        animateText()
-    } 
+opacity:0,
+onStart:function(){
+    animateText()
+} 
 },"-=0.5")
 .from("#m1",{
-    opacity:0,
-    y:15
+opacity:0,
+y:15
 },"-=0.5")
 
 .from("#line",{
-    opacity:0,
-    width:0,
-    duration:0.8
+opacity:0,
+width:0,
+duration:0.8
 })
 
 .from("#btm a",{
-    y:50,
-    stagger:0.2
+y:50,
+stagger:0.2
 },"-=0.5")
 
 // .to("ovr1",{
@@ -118,13 +136,96 @@ t1
 //     duration:4
 // })
 
-.to("#reveal",
+.to(".reveal",
 {
-    clipPath: "polygon(100% 0, 100% 0, 100% 100%, 100% 100%)",
-    duration:1
+clipPath: "polygon(100% 0, 100% 0, 100% 100%, 100% 100%)",
+duration:1
 },"-=2.5")
+}
+
+function AnimateSmallScreen(){
+    let t2=gsap.timeline();
+    t2
+
+    .from("#onStart p",{
+    opacity:0,
+    ease:Expo.easeInOut,
+    y:100,
+    duration:1,
+    })
+
+    .to("#onStart p",{
+    y:-1000,
+    opacity:0,
+    duration:1,
+    ease:Expo.easeInOut,
+    })
+
+    .to("#onStart",{
+    opacity:0,
+    y:-122,
+    ease:Expo.easeInOut,
+    duration:0.7,
+    display:"none"
+    },"-=1.2")
 
 
+    .from("#upr .link",{
+    opacity:0,
+    y:20,
+    // ease:Expo.easeInOut,
+    duration:1,
+    },"-=0.5")
+
+    .from(".mp2",{
+    opacity:0,
+    onStart:function(){
+        animateText()
+    } 
+    },"-=0.5")
+
+    .from("#m1",{
+    opacity:0,
+    y:15
+    },"-=0.5")
+
+    .from("#m1r #line",{
+    opacity:0,
+    width:0,
+    duration:0.8
+    })
+
+    .from("#btm a",{
+    y:50,
+    stagger:0.2
+    },"-=0.5")
+
+    SmallScreenLine()
+
+    let t4=gsap.timeline({
+        scrollTrigger:{
+            trigger:"#g1 .reveal",
+            start:"80% 90%",
+            // markers:true
+        }
+    })
+
+    t4.to(".reveal",{
+        clipPath: "polygon(100% 0, 100% 0, 100% 100%, 100% 100%)",
+        duration:1,
+        stagger:1.6
+    })
+
+    
+}
+
+if(window.innerWidth>=650){
+    AnimateFullScreen()
+}
+
+else{
+    AnimateSmallScreen()
+}
 
 
 

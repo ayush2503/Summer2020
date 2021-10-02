@@ -268,7 +268,7 @@ button:hover{
     background-color: rgb(223, 208, 191);
 }
 
-#reveal{
+.reveal{
    
     height: 100%;
     width: 100%;
@@ -312,6 +312,13 @@ button:hover{
 
     #sidenav{
         top: 55%;
+    }
+
+    #onStart p{
+        width: 70%;
+        text-align: center;
+        font-size: 4rem;
+        line-height: 6rem;
     }
 
 }
