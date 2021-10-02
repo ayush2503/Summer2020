@@ -217,7 +217,7 @@ html,body{
     /* background-color:black; */
     position: relative;
     overflow: hidden;
-
+   
 }
 
 #g1 video{
@@ -253,6 +253,32 @@ button{
 button:hover{
     cursor: pointer;
 }
+
+#onStart{
+    position: absolute;
+    font-family: 'Voyage';
+    font-weight: 100;
+    display: grid;
+    place-items: center;
+    color: rgba(0, 0, 0, 0.652);
+    font-size: 3rem;
+    z-index: 11;
+    height: 100vh;
+    width: 100%;
+    background-color: rgb(223, 208, 191);
+}
+
+#reveal{
+   
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    background-color: #FCFFEE;
+    clip-path: polygon(100% 0, 0 0, 0 100%, 100% 100%);
+
+}
+
+
 @media (max-width:500px){
     html,body{
         font-size: 10px;
